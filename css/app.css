@@ -28,7 +28,10 @@ a{
   /*color:#685A72;*/
   /*color:#4A4B51;*/
   /*color:#505158;*/
-  color:#4A4D51;
+  /* color:#4A4D51; */
+  /* color:#3e3b49; */
+  /* color:#424548; */
+  color:#46474e;
 
 }
 
@@ -41,7 +44,8 @@ a{
 
 span.largey{
   /*color:#6B677E;*/
-  color:#6D6981;
+  /* color:#6D6981; */
+  color:#656178;
   font-size:18px;
   letter-spacing:-1px;
   line-height:1.30;
@@ -55,7 +59,8 @@ span.largey{
 span.largeyd{
   /*color:#6D6981;*/
  /* color:#716D85;*/
-  color:#6B677E;
+  /* color:#6B677E; */
+  color:#656178;
   font-style:italic;
   text-decoration:underline;
   font-family:Arial;
@@ -63,7 +68,8 @@ span.largeyd{
 }
 
 span.highLight{
-  color:#141216;
+  /* color:#141216; */
+  color:#26242d;
   font-family:Arial;
   font-weight:500;
 }
@@ -75,7 +81,8 @@ span.highLight{
 span.services{
   /*color:#716D85;*/
   /*color:#6B677E;*/
-  color:#6D6981;
+  /* color:#6D6981; */
+  color:#656178;
   font-size:18px;
   letter-spacing:-1px;
   line-height:1.30;
@@ -321,7 +328,8 @@ li.relatedBullet{
   font-family:Arial,Verdana;
   font-weight:600;
   text-align:center;
-  color:#69637A;
+  /* color:#69637A; */
+  color:#656178;
 }
 /*-------------------Grid----------*/
 
