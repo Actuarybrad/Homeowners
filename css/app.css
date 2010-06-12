@@ -19,11 +19,23 @@ a{
   color:#46474e;
 }
 
-/*#headerBox{
-  background-image:url(../images/all4.jpg);
-  background-repeat:no-repeat;
-  background-color:#fff;
-}*/
+#bread{
+  /*background-image:url(../images/gray/grid/grid3-hrow2.gif);*/
+  /*background-image:url(../images/four.jpg);*/
+  /*background-image:url(../images/bread.png);*/
+  /*background-repeat:repeat-x;*/
+  /*background-attachment:scroll;
+  background-position:left bottom;*/
+  /*background-color:#111;*/
+  /*background-color: #cec8d4;*/
+  /*background-color: #b5abbe;*/
+  /*background-color: #bdb5c5;*/
+ /* background-color: #BCB0C4;*/
+  background-color: #C9C1D0;
+ /* background-color: #c6becd;*/
+  /*border-top: 1px solid #DBD7DF;*/;
+ /* margin-top: 1px;*/
+}
 /*-------startpage-------*/
 
 span.largey{
@@ -120,27 +132,30 @@ ul.msd{
 }
 
 #Selections{
-  background-image:url(../images/Selections1.jpg);
+  background-image:url(../images/Selections3.jpg);
   background-repeat:repeat-x;
   background-attachment:scroll;
   background-position:left bottom;
-  background-color:#F6F6F6;
-  line-height:22px;
+  background-color:#F7F7F8;
+  /*line-height:22px;*/
   height:22px;
   margin-top:32px;
-  padding:1px 0px 1px 0px;
+  /*padding:1px 0px 1px 0px;*/
+  border-bottom:1px solid #DBD3DE;
 }
 
 #Review{
-  background-image:url(../images/Review1.jpg);
+  background-image:url(../images/Review2.jpg);
   background-repeat:repeat-x;
   background-attachment:scroll;
   background-position:left bottom;
-  background-color:#F6F6F6;
-  line-height:22px;
+  background-color:#F7F7F8;
+  /*line-height:21px;*/
   height:22px;
   margin-top:34px;
-  padding:1px 0px 1px 0px;
+  /*padding:1px 0px 1px 0px;*/
+  /*border-bottom:1px solid #D5CCD9;*/
+  border-bottom:1px solid #DBD3DE;
 }
 
 #Resources{
@@ -149,10 +164,11 @@ ul.msd{
   background-attachment:scroll;
   background-position:left bottom;
   background-color:#F6F6F6;
-  line-height:22px;
-  height:22px;
+  line-height:21px;
+  height:21px;
   margin-top:34px;
   padding:1px 0px 1px 0px;
+  border-bottom:1px solid #D5CCD9;
 }
 
 #Guides{
@@ -161,10 +177,11 @@ ul.msd{
   background-attachment:scroll;
   background-position:left bottom;
   background-color:#F6F6F6;
-  line-height:22px;
-  height:22px;
+  line-height:21px;
+  height:21px;
   margin-top:34px;
   padding:1px 0px 1px 0px;
+  border-bottom:1px solid #D5CCD9;
 }
 
 ul.msd li.divider{
@@ -196,6 +213,7 @@ ul.msd a{
   font-weight:600;
   text-align:center;
   color:#656178;
+  border-bottom:1px solid #D6D0DD;
 }
 /*-------------------Grid----------*/
 
