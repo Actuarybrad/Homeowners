@@ -9,7 +9,7 @@ App.workspace = function() {
             Ext.BLANK_IMAGE_URL = "images/s.gif";
             main = new Ext.Container({
                 layout: 'vbox',
-                height: 780,
+                height: 775,
                 layoutConfig: {
                     align: 'stretch',
                     pack: 'start'
@@ -24,12 +24,8 @@ App.workspace = function() {
                     id: 'headerBox',
                     autoEl: {
                         tag: 'img',
-                        src: 'images/all3.jpg'
+                        src: 'images/allr.jpg'
                     }
-                },{
-                    xtype: 'box',
-                    height: 1,
-                    id: 'bread'
                 },{
                     flex: 1,
                     xtype: 'container',

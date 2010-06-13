@@ -8,7 +8,7 @@ body{
 	background-attachment:scroll;
 	background-position:50% 0;  */
 	width:950px;	
-	margin:0px auto 0px auto; 
+	margin:1px auto 0px auto;
 	font-family:Arial,Verdana,Helvetica,sans-serif;
 }
 
@@ -16,25 +16,11 @@ a{
   outline:none;
   font-size:12px;
   text-decoration:none;
-  color:#46474e;
+  /*color:#46474e;*/
+  color:#404148;
 }
-
-#bread{
-  /*background-image:url(../images/gray/grid/grid3-hrow2.gif);*/
-  /*background-image:url(../images/four.jpg);*/
-  /*background-image:url(../images/bread.png);*/
-  /*background-repeat:repeat-x;*/
-  /*background-attachment:scroll;
-  background-position:left bottom;*/
-  /*background-color:#111;*/
-  /*background-color: #cec8d4;*/
-  /*background-color: #b5abbe;*/
-  /*background-color: #bdb5c5;*/
- /* background-color: #BCB0C4;*/
-  background-color: #C9C1D0;
- /* background-color: #c6becd;*/
-  /*border-top: 1px solid #DBD7DF;*/;
- /* margin-top: 1px;*/
+#headerBox{
+  background-color: transparent;
 }
 /*-------startpage-------*/
 
@@ -81,7 +67,7 @@ span.services{
 }
 
 #startPage{
-  padding-top:17px;
+  padding-top:15px;
   padding-bottom:0px;
   padding-right:10px;
   padding-left:4px;
@@ -105,7 +91,7 @@ ul.linkList li{
 }
 /*-------siderbar-------*/
 .bullet{
-  background:transparent url(../images/right-gray.png) no-repeat 6px 50%;
+  background:transparent url(../images/right-gray.png) no-repeat 7px 50%;
 }
 
 .bulletClick{
@@ -132,56 +118,41 @@ ul.msd{
 }
 
 #Selections{
-  background-image:url(../images/Selections3.jpg);
+  background-image:url(../images/round0.jpg);
   background-repeat:repeat-x;
-  background-attachment:scroll;
-  background-position:left bottom;
-  background-color:#F7F7F8;
-  /*line-height:22px;*/
-  height:22px;
-  margin-top:32px;
-  /*padding:1px 0px 1px 0px;*/
-  border-bottom:1px solid #DBD3DE;
+  background-color:#FFF;
+  height:25px;
+  margin-top:30px;
 }
 
 #Review{
-  background-image:url(../images/Review2.jpg);
+  background-image:url(../images/round1.jpg);
   background-repeat:repeat-x;
-  background-attachment:scroll;
-  background-position:left bottom;
-  background-color:#F7F7F8;
+  /*background-attachment:scroll;
+  background-position:left bottom;*/
+  background-color:#fafafa;
   /*line-height:21px;*/
-  height:22px;
-  margin-top:34px;
+  height:25px;
+  margin-top:32px;
   /*padding:1px 0px 1px 0px;*/
   /*border-bottom:1px solid #D5CCD9;*/
-  border-bottom:1px solid #DBD3DE;
+  /*border-bottom:1px solid #DBD3DE;*/
 }
 
 #Resources{
-  background-image:url(../images/Resources1.jpg);
+  background-image:url(../images/round2.jpg);
   background-repeat:repeat-x;
-  background-attachment:scroll;
-  background-position:left bottom;
-  background-color:#F6F6F6;
-  line-height:21px;
-  height:21px;
-  margin-top:34px;
-  padding:1px 0px 1px 0px;
-  border-bottom:1px solid #D5CCD9;
+  background-color:#FFF;
+  height:25px;
+  margin-top:32px;
 }
 
 #Guides{
-  background-image:url(../images/Guides1.jpg);
+  background-image:url(../images/round3.jpg);
   background-repeat:repeat-x;
-  background-attachment:scroll;
-  background-position:left bottom;
-  background-color:#F6F6F6;
-  line-height:21px;
-  height:21px;
-  margin-top:34px;
-  padding:1px 0px 1px 0px;
-  border-bottom:1px solid #D5CCD9;
+  background-color:#FFF;
+  height:25px;
+  margin-top:32px;
 }
 
 ul.msd li.divider{
@@ -212,8 +183,9 @@ ul.msd a{
   font-family:Arial,Verdana;
   font-weight:600;
   text-align:center;
-  color:#656178;
-  border-bottom:1px solid #D6D0DD;
+  color:#6C6880;
+  /*border-bottom:1px solid #D6D0DD;*/
+  border-bottom:1px solid #E3DDE6;
 }
 /*-------------------Grid----------*/
 
