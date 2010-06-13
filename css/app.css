@@ -1,26 +1,28 @@
 body{
-	font-size:12px;
-	line-height:18px;
-	 color:#36373C;
-	background-color:#ffffff;
-	/* background-image:url(../images/body2.png);
+  font-size:12px;
+  line-height:18px;
+  color:#36373C;
+  background-color:#ffffff;
+/* background-image:url(../images/body2.png);
 	background-repeat:repeat-y;
 	background-attachment:scroll;
 	background-position:50% 0;  */
-	width:950px;	
-	margin:1px auto 0px auto;
-	font-family:Arial,Verdana,Helvetica,sans-serif;
+  width:950px;
+  margin:1px auto 0px auto;
+  font-family:Arial,Verdana,Helvetica,sans-serif;
 }
 
 a{
   outline:none;
   font-size:12px;
   text-decoration:none;
-  /*color:#46474e;*/
-  color:#404148;
+/*color:#46474e;*/
+/*color:#404148;*/
+  color:#36373C;
 }
+
 #headerBox{
-  background-color: transparent;
+  background-color:transparent;
 }
 /*-------startpage-------*/
 
@@ -90,6 +92,7 @@ ul.linkList li{
   padding-left:6px;
 }
 /*-------siderbar-------*/
+
 .bullet{
   background:transparent url(../images/right-gray.png) no-repeat 7px 50%;
 }
@@ -128,15 +131,15 @@ ul.msd{
 #Review{
   background-image:url(../images/round1.jpg);
   background-repeat:repeat-x;
-  /*background-attachment:scroll;
+/*background-attachment:scroll;
   background-position:left bottom;*/
   background-color:#fafafa;
-  /*line-height:21px;*/
+/*line-height:21px;*/
   height:25px;
   margin-top:32px;
-  /*padding:1px 0px 1px 0px;*/
-  /*border-bottom:1px solid #D5CCD9;*/
-  /*border-bottom:1px solid #DBD3DE;*/
+/*padding:1px 0px 1px 0px;*/
+/*border-bottom:1px solid #D5CCD9;*/
+/*border-bottom:1px solid #DBD3DE;*/
 }
 
 #Resources{
@@ -174,6 +177,7 @@ ul.msd a{
   font-weight:500;
 }
 /*-----Footer------*/
+
 #footerBox{
   background-image:url(../images/four.jpg);
   background-repeat:repeat-x;
@@ -184,8 +188,25 @@ ul.msd a{
   font-weight:600;
   text-align:center;
   color:#6C6880;
-  /*border-bottom:1px solid #D6D0DD;*/
+/*border-bottom:1px solid #D6D0DD;*/
   border-bottom:1px solid #E3DDE6;
+}
+
+.x-fieldset legend{
+  /*color:#837A9E;*/
+  color:#75718C;
+  font-family:Arial,Verdana;
+  font-size:12px;
+}
+
+.x-form-item{
+  color:#313c53;
+/*color:#36373C;*/
+  padding:2px 0px 2px 0px;
+}
+
+.x-form fieldset{
+  border-color:#CACACC;
 }
 /*-------------------Grid----------*/
 

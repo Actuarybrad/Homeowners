@@ -1,7 +1,6 @@
 Ext.ns('App');
 
 App.StartPage = Ext.extend(Ext.BoxComponent, {
-    id:'card-0',
 	pageContent:[
 		'<div id="startPage">',		
 		'<h3><span class="largey">Welcome to the Workers Compensation Loss Cost Multiplier Comparison Guide</span></h3>',		

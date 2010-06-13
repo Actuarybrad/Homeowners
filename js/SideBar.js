@@ -21,27 +21,27 @@ App.SideBar = Ext.extend(Ext.Container, {
         htext: 'Selections',
         links: [{
             text: 'Location/City',
-            id: 'link-1',
+            id: 'link-0',
             href: '#'
         }, {
             text: 'Deductible',
-            id: 'link-2',
+            id: 'link-1',
             href: '#'
         }, {
             text: 'Coverage',
-            id: 'link-3',
+            id: 'link-2',
             href: '#'
         }, {
             text: 'Structure',
-            id: 'link-4',
+            id: 'link-3',
             href: '#'
         }, {
             text: 'Distance',
-            id: 'link-5',
+            id: 'link-4',
             href: '#'
         }, {
             text: 'Year',
-            id: 'link-6',
+            id: 'link-5',
             href: '#'
         }]
 	},
@@ -101,7 +101,7 @@ App.SideBar = Ext.extend(Ext.Container, {
             href: '#'
         }, {
             text: 'Homeowners',
-            id: 'link-0',
+            id: 'link-20',
             href: '#'
         }]
 	},
@@ -134,7 +134,7 @@ App.SideBar = Ext.extend(Ext.Container, {
         });
     },
     onLayout: function() {
-        Ext.get('link-0').addClass('bulletClick');
+        Ext.get('link-20').addClass('bulletClick');
     },
     mouseOver: function(c, d) {
         Ext.get(d).down('a').addClass('linkOver');
@@ -154,22 +154,24 @@ App.SideBar = Ext.extend(Ext.Container, {
         var a = d.id.split("link-")[1];
         var f = parseInt(a);
         switch (true) {
-        case f == 0: Ext.getCmp('card-panel').getLayout().setActiveItem(f);
-            break
-        case f == 1: Ext.getCmp('card-1').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(f);
-            break
-        case f == 2: Ext.getCmp('card-2').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(f);
-            break
-        case f == 3: Ext.getCmp('card-3').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(f);
-            break
-        case f == 4: Ext.getCmp('card-4').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(f);
-            break
-        default:
+        case f == 20:
             Ext.getCmp('card-panel').getLayout().setActiveItem(0);
+          break
+        case f == 7:
+            Ext.getCmp('card-1').load();
+            Ext.getCmp('card-panel').getLayout().setActiveItem(1);
+          break
+        case f == 8:
+            Ext.getCmp('card-2').load();
+            Ext.getCmp('card-panel').getLayout().setActiveItem(2);
+          break
+        case f == 9:
+            Ext.getCmp('card-3').load();
+            Ext.getCmp('card-panel').getLayout().setActiveItem(3);
+          break
+        default:
+            Ext.getCmp('card-panel').getLayout().setActiveItem(4);
+            Ext.getCmp("formCard").getLayout().setActiveItem(f);
         }
     }
 });

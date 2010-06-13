@@ -55,7 +55,7 @@ App.workspace = function() {
             							},{
             								xtype: 'groupgridcurrent'
             							},{
-            								xtype: 'groupgridhistorical'
+            								xtype: 'formwiz'
             							}]
                       }]
                     },{
