@@ -44,8 +44,8 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                 singleSelect: true,
                 listeners: {
                     rowselect: function(c, b, r) {
-                        Ext.getCmp('contactCont').updateDetail(r.data);
-                        Ext.getCmp('graphCont').updateGraph(r.data);
+                        //Ext.getCmp('contactCont').updateDetail(r.data);
+                        //Ext.getCmp('graphCont').updateGraph(r.data);
                     }
                 }
             }),
@@ -54,6 +54,7 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
             deferRowRender: false,
             stripeRows: true,
             border: false,
+            columnLines: true,
             listeners: {
                 render: {
                     fn: function() {
@@ -66,14 +67,14 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
             },
             viewConfig: {
                 forceFit: true,
-                scrollOffset: 1
+                scrollOffset: 0
             }
         });
         App.CompareGrid.superclass.initComponent.apply(this, arguments);
     }
 });
 Ext.reg('comparegrid', App.CompareGrid);
-
+/*
 App.ContactDetail = Ext.extend(Ext.BoxComponent, {
     tplMarkup: ['<div class="thumb-wrap">', '<div class="boxyc">', '<h4>Contact Information</h4>', '</div>', '<dl class="notblcontact">', '<dt>Company:</dt>', '<dd>{short}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Group:</dt>', '<dd>{grpname}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Phone Number:</dt>', '<dd class="right">{phone}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Web Site:</dt>', '<dd class="right"><a class="webLink2" href="http://{web}">{web}</a></dd>', '<ul><li class="dividerc"></li></ul></dl>', '<table class="tblcontact">', '<tr><td>A.M. Best Rating:</td>', '<td class="right">{ambest}</td></tr>', '<tr><td>2008 Market Share:</td>', '<td class="right">{ms08}</td></tr>', '</table></div>'],
     initComponent: function() {
@@ -118,4 +119,4 @@ App.GridGraph = Ext.extend(Ext.Container, {
         App.GridGraph.superclass.initComponent.apply(this, arguments);
     }
 });
-Ext.reg('gridgraph', App.GridGraph);
+Ext.reg('gridgraph', App.GridGraph);*/

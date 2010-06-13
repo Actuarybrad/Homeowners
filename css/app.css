@@ -121,19 +121,19 @@ ul.msd{
 }
 
 #Selections{
-  background-image:url(../images/round0.jpg);
-  background-repeat:repeat-x;
+  background-image:url(../images/Selections.jpg);
+  background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
   margin-top:30px;
 }
 
 #Review{
-  background-image:url(../images/round1.jpg);
-  background-repeat:repeat-x;
+  background-image:url(../images/Review.jpg);
+  background-repeat:no-repeat;
 /*background-attachment:scroll;
   background-position:left bottom;*/
-  background-color:#fafafa;
+  background-color:#FFF;
 /*line-height:21px;*/
   height:25px;
   margin-top:32px;
@@ -143,16 +143,16 @@ ul.msd{
 }
 
 #Resources{
-  background-image:url(../images/round2.jpg);
-  background-repeat:repeat-x;
+  background-image:url(../images/Resources.jpg);
+  background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
   margin-top:32px;
 }
 
 #Guides{
-  background-image:url(../images/round3.jpg);
-  background-repeat:repeat-x;
+  background-image:url(../images/Guides.jpg);
+  background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
   margin-top:32px;
@@ -209,6 +209,15 @@ ul.msd a{
   border-color:#CACACC;
 }
 /*-------------------Grid----------*/
+.x-grid3-row-alt{
+	background-color:#faf9fb;
+}
+
+.x-grid3-row-selected {
+	background-color:#F1ECF1 !important;
+	background-image: none;
+	border-color:#DCDADC;
+}
 
 td.x-grid3-hd-over,td.sort-desc,td.sort-asc,td.x-grid3-hd-menu-open{
   border-left-color:#eee;
@@ -229,16 +238,16 @@ td.x-grid3-hd-over .x-grid3-hd-inner,td.sort-desc .x-grid3-hd-inner,td.sort-asc 
   background-image:url(../images/sort_desc.gif);
 }
 
-.x-grid-group-hd div.x-grid-group-title{
+/*.x-grid-group-hd div.x-grid-group-title{
   background-image:none;
   color:#5F5F5F;
   font:bold 11px tahoma,arial,helvetica,sans-serif;
-}
+}*/
 
 .x-grid-with-col-lines .x-grid3-row{
   border-top-color:transparent;
 }
-
+/*
 .x-grid3-col-rightPad1{
   padding-right:5px;
 }
@@ -257,9 +266,9 @@ td.x-grid3-hd-over .x-grid3-hd-inner,td.sort-desc .x-grid3-hd-inner,td.sort-asc 
 
 .x-grid3-cell-text,.x-grid3-hd-text{
   color:#fff;
-}
+}*/
 /*-----Grouping-Grid----------*/
-
+/*
 span.groupHeader{
   font:oblique small-caps 900 12px Arial;
   color:#46404D;
@@ -271,9 +280,9 @@ span.groupHeader{
 
 .x-grid-group-hd div.x-grid-group-title{
   padding:4px 4px 2px 5px;
-}
+}*/
 /*-----Summary-Grid----------*/
-
+/*
 .x-grid3-gridsummary-row-inner{
   overflow:hidden;
   width:100%;
@@ -303,4 +312,4 @@ span.groupHeader{
 
 .x-grid3-summary-row .x-grid3-td-rightPad7{
   background-color:#E1DEE2;
-}
+}*/

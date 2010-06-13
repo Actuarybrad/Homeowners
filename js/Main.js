@@ -49,11 +49,7 @@ App.workspace = function() {
                         items: [{
             								xtype: 'startpage'
             							},{
-            								xtype: 'gridcurrent'
-            							},{
-            								xtype: 'gridhistorical'
-            							},{
-            								xtype: 'groupgridcurrent'
+            								xtype: 'comparegrid'
             							},{
             								xtype: 'formwiz'
             							}]

@@ -134,6 +134,7 @@ App.SideBar = Ext.extend(Ext.Container, {
         });
     },
     onLayout: function() {
+        App.SideBar.superclass.onLayout.call(this);
         Ext.get('link-20').addClass('bulletClick');
     },
     mouseOver: function(c, d) {
@@ -156,21 +157,13 @@ App.SideBar = Ext.extend(Ext.Container, {
         switch (true) {
         case f == 20:
             Ext.getCmp('card-panel').getLayout().setActiveItem(0);
-          break
-        case f == 7:
-            Ext.getCmp('card-1').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(1);
-          break
+          break        
         case f == 8:
-            Ext.getCmp('card-2').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(2);
-          break
-        case f == 9:
-            Ext.getCmp('card-3').load();
-            Ext.getCmp('card-panel').getLayout().setActiveItem(3);
-          break
+            Ext.StoreMgr.get('premiums').load({params: Ext.getCmp('formCard').getForm().getValues()});
+            Ext.getCmp('card-panel').getLayout().setActiveItem(1);
+          break        
         default:
-            Ext.getCmp('card-panel').getLayout().setActiveItem(4);
+            Ext.getCmp('card-panel').getLayout().setActiveItem(2);
             Ext.getCmp("formCard").getLayout().setActiveItem(f);
         }
     }
