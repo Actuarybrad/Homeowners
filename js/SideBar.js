@@ -2,7 +2,8 @@ Ext.ns('App');
 App.LinksPanel = Ext.extend(Ext.Container, {
     border: false,
     layout: 'fit',
-    tpl: new Ext.XTemplate('<h4 id="{htext}"></h4><tpl for="links"><ul class="msd"><li class="divider"></li><li id="{id}" class="bullet"><a href="{href}">{text}</a></li></ul></tpl>'),
+    //tpl: new Ext.XTemplate('<h4 id="{htext}"></h4><tpl for="links"><ul class="msd"><li id="{id}" class="bullet"><a href="{href}">{text}</a></li><li class="divider"></li></ul></tpl>'),
+    tpl: new Ext.XTemplate('<h4 id="{htext}"></h4><tpl for="links"><ul class="msd"><li id="{id}" class="bullet"><a href="{href}">{text}</a></li></ul></tpl>'),
     initComponent: function() {
         data = this.data;
         tpl = this.tpl;
@@ -159,7 +160,7 @@ App.SideBar = Ext.extend(Ext.Container, {
             Ext.getCmp('card-panel').getLayout().setActiveItem(0);
           break        
         case f == 8:
-            Ext.StoreMgr.get('premiums').load({params: Ext.getCmp('formCard').getForm().getValues()});
+            Ext.StoreMgr.get('cmpStore').load({params: Ext.getCmp('formCard').getForm().getValues()});
             Ext.getCmp('card-panel').getLayout().setActiveItem(1);
           break        
         default:

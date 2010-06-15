@@ -9,7 +9,7 @@ App.workspace = function() {
             Ext.BLANK_IMAGE_URL = "images/s.gif";
             main = new Ext.Container({
                 layout: 'vbox',
-                height: 775,
+                height: 782,
                 layoutConfig: {
                     align: 'stretch',
                     pack: 'start'
@@ -42,14 +42,14 @@ App.workspace = function() {
                     },{
                         xtype: 'container',
                         flex: 1,
-                        margins: '32 0 30 25',
+                        margins: '30 0 2 25',
                         layout: 'card',
                         activeItem: 0,
                         id: 'card-panel',
                         items: [{
             								xtype: 'startpage'
             							},{
-            								xtype: 'comparegrid'
+            								xtype: 'gridgraph'
             							},{
             								xtype: 'formwiz'
             							}]

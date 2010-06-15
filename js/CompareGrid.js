@@ -2,23 +2,7 @@ Ext.ns('App');
 App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
     initComponent: function() {
         Ext.apply(this, {
-            store: new Ext.data.JsonStore({
-                root: 'results',
-                storeId: 'premiums',
-                fields: ['company', 'grpname', 'premium', 'cr08', 'cr07', 'cr06', 'cr05', 'cr04', 'short', 'phone', 'web', 'ambest', {
-                    name: 'ms08',
-                    convert: App.Format.pctChange
-                }],
-                proxy: new Ext.data.HttpProxy({
-                    url: 'php/compare.php',
-                    method: 'GET'
-                }),
-                remoteSort: true,
-                sortInfo: {
-                    field: 'premium',
-                    direction: 'ASC'
-                }
-            }),
+            store: new App.compareStore(),
             columns: [{
                 header: 'Company',
                 id: 'comCol',
@@ -44,7 +28,7 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                 singleSelect: true,
                 listeners: {
                     rowselect: function(c, b, r) {
-                        //Ext.getCmp('contactCont').updateDetail(r.data);
+                        Ext.getCmp('contactCont').updateDetail(r.data);
                         //Ext.getCmp('graphCont').updateGraph(r.data);
                     }
                 }
@@ -74,9 +58,25 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
     }
 });
 Ext.reg('comparegrid', App.CompareGrid);
-/*
+
 App.ContactDetail = Ext.extend(Ext.BoxComponent, {
-    tplMarkup: ['<div class="thumb-wrap">', '<div class="boxyc">', '<h4>Contact Information</h4>', '</div>', '<dl class="notblcontact">', '<dt>Company:</dt>', '<dd>{short}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Group:</dt>', '<dd>{grpname}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Phone Number:</dt>', '<dd class="right">{phone}</dd>', '<ul><li class="dividerc"></li></ul>', '<dt>Web Site:</dt>', '<dd class="right"><a class="webLink2" href="http://{web}">{web}</a></dd>', '<ul><li class="dividerc"></li></ul></dl>', '<table class="tblcontact">', '<tr><td>A.M. Best Rating:</td>', '<td class="right">{ambest}</td></tr>', '<tr><td>2008 Market Share:</td>', '<td class="right">{ms08}</td></tr>', '</table></div>'],
+    tplMarkup: ['<div class="thumb-wrap">',
+                '<div class="contactFour">',
+                //'<h4>Contact Information</h4>',
+                //'<h4></h4>',
+                '</div>',
+                '<div class="contactTop">',
+                '<p class="contactHead">Company</p><p>{short}</p>',
+                '<p class="contactHead">Group</p><p>{grpname}</p>',
+                '<p class="contactHead">Phone Number</p><p>{phone}</p>',
+                '<p class="contactHead">Web Site</p><p><a class="webLink2" href="http://{web}">{web}</a></p>',
+                '<table class="contactTable">',
+                //'<tr><td><p class="contactHead">Phone Number</p><p>{phone}</p></td><td><p class="contactHead">Web Site</p><p><a class="webLink2" href="http://{web}">{web}</a></p></td></tr>',
+                '<tr><td class="left"><p class="contactHead">A.M. Best Rating</p><p>{ambest}</p></td><td><p class="contactHead">Market Share</p><p>{ms08}</p></td></tr>',
+                '</table>',
+                '</div>',
+                '</div>'
+                ],
     initComponent: function() {
         this.tpl = new Ext.Template(this.tplMarkup);
         App.ContactDetail.superclass.initComponent.apply(this, arguments);
@@ -87,6 +87,31 @@ App.ContactDetail = Ext.extend(Ext.BoxComponent, {
 });
 Ext.reg('contactdetail', App.ContactDetail);
 
+App.GridGraph = Ext.extend(Ext.Container, {
+    layout: {
+        type: 'vbox',
+        pack: 'start',
+        align: 'stretch'
+    },
+    initComponent: function() {
+        this.items = [{
+            xtype: 'comparegrid',
+            id: 'gridPanel',
+            //flex: 1
+            height:478
+        },{
+            xtype: 'contactdetail',
+            id: 'contactCont',
+            flex: 1
+            //height: 200,
+            //width: 250
+        }];
+    App.GridGraph.superclass.initComponent.apply(this, arguments);
+    }
+});
+Ext.reg('gridgraph', App.GridGraph);
+
+/*
 App.GridGraph = Ext.extend(Ext.Container, {
     layout: {
         type: 'vbox',
