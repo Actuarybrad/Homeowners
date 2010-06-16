@@ -87,7 +87,7 @@ App.ContactDetail = Ext.extend(Ext.BoxComponent, {
 });
 Ext.reg('contactdetail', App.ContactDetail);
 
-App.GridGraph = Ext.extend(Ext.Container, {
+/*App.GridGraph = Ext.extend(Ext.Container, {
     layout: {
         type: 'vbox',
         pack: 'start',
@@ -97,7 +97,6 @@ App.GridGraph = Ext.extend(Ext.Container, {
         this.items = [{
             xtype: 'comparegrid',
             id: 'gridPanel',
-            //flex: 1
             height:478
         },{
             xtype: 'contactdetail',
@@ -109,9 +108,8 @@ App.GridGraph = Ext.extend(Ext.Container, {
     App.GridGraph.superclass.initComponent.apply(this, arguments);
     }
 });
-Ext.reg('gridgraph', App.GridGraph);
+Ext.reg('gridgraph', App.GridGraph);*/
 
-/*
 App.GridGraph = Ext.extend(Ext.Container, {
     layout: {
         type: 'vbox',
@@ -122,10 +120,10 @@ App.GridGraph = Ext.extend(Ext.Container, {
         this.items = [{
             xtype: 'comparegrid',
             id: 'gridPanel',
-            flex: 1
+            height: 476
         }, {
             xtype: 'container',
-            height: 208,
+            flex: 1,
             layout: {
                 type: 'hbox',
                 pack: 'start',
@@ -136,12 +134,12 @@ App.GridGraph = Ext.extend(Ext.Container, {
                 id: 'contactCont',
                 width: 226
             }, {
-                xtype: 'graph',
+                xtype: 'box',
                 id: 'graphCont',
                 flex: 1
             }]
-            }];
+        }];
         App.GridGraph.superclass.initComponent.apply(this, arguments);
     }
 });
-Ext.reg('gridgraph', App.GridGraph);*/
+Ext.reg('gridgraph', App.GridGraph);

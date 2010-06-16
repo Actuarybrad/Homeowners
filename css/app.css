@@ -89,8 +89,7 @@ ul.linkList li{
 /*-------siderbar-------*/
 
 .bullet{
-  /*background:transparent url(../images/right-gray.png) no-repeat 7px 50%;*/
-  /*background:transparent url(../images/arrow.png) no-repeat 2px 1px;*/
+  background:transparent url(../images/right-gray.png) no-repeat 7px 50%;
 }
 
 .bulletClick{
@@ -111,7 +110,7 @@ ul.linkList li{
 }
 
 ul.msd{
-  background-image:url(../images/linkImage.jpg);
+  background-image:url(../images/linkImage1.jpg);
   background-repeat:no-repeat;
   background-color:#FFFFFF;
   margin:1px 0px 0px 0px;
@@ -133,7 +132,7 @@ ul.msd{
   background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
-  margin-top:33px;
+  margin-top:28px;
 }
 
 #Resources{
@@ -141,7 +140,7 @@ ul.msd{
   background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
-  margin-top:33px;
+  margin-top:28px;
 }
 
 #Guides{
@@ -149,12 +148,12 @@ ul.msd{
   background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
-  margin-top:33px;
+  margin-top:28px;
 }
 
 ul.msd a{
   display:block;
-  padding:0px 0px 0px 8px;
+  padding:0px 0px 0px 12px;
   font-family:Arial,sans-serif,Verdana,Arial,Helvetica,sans-serif;
   font-size:12px;
   font-weight:500;
@@ -251,7 +250,7 @@ a.webLink2{
 }
 
 div.contactFour{
-  background-image:url(../images/Contact.jpg);
+  background-image:url(../images/Contact1.jpg);
   background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
@@ -267,4 +266,8 @@ div.contactTop{
 
 table.contactTable td.left{
   width:60%;
+}
+
+#graphCont{
+  background-color: #fff;
 }
