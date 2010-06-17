@@ -202,10 +202,11 @@ ul.msd a{
 }
 
 .x-grid3-row-selected {	
-	ackground-image: none;
-  /*background: #E6E6F2 !important; */
-  background: #EAEAF3 !important;
-  /* border:1px dotted #B9B5CF; */
+  /* background-image: none; */
+  background:transparent url(../images/default/grid/row-over.gif) !important;
+  /*background: #E6E6F2 !important;*/  
+  /* border:1px dotted #B9B5CF;*/
+  /* background: #EAEAF3 !important; */
   border:1px dotted #B3AFC8;
 }
 
