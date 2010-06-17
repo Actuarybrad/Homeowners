@@ -27,12 +27,10 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
             sm: new Ext.grid.RowSelectionModel({
                 singleSelect: true,
                 listeners: {
-                    rowselect: function(c, b, r) {
-						//var detailData = [[2004, r.data.cr04], [2005, r.data.cr05], [2006, r.data.cr06], [2007, r.data.cr07], [2008, r.data.cr08]];					
-						//result = Ext.util.JSON.decode('{"results":[' +Ext.util.JSON.encode(r.json)+ ']}');						
-						//Ext.StoreMgr.get('testStore').loadData(result);
-						Ext.getCmp('contactCont').updateDetail(r.data);					
-                        Ext.getCmp('graphCont').updateGraph(r.data);						
+                    rowselect: function(c, b, r) {											
+						res = Ext.util.JSON.decode('{"results":[{"ratio":' +r.data.cr04+ '},{"ratio":' +r.data.cr05+ '},{"ratio":' +r.data.cr06+ '},{"ratio":' +r.data.cr07+ '},{"ratio":' +r.data.cr08+ '}]}');						
+						Ext.getCmp('contactCont').updateDetail(r.data);                       						
+                        Ext.getCmp('graphCont').loadData(r.data.company,res);								
                     }
                 }
             }),
@@ -47,7 +45,7 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                     fn: function() {
                         var a = this;
                         this.getStore().on("load", function() {
-                            this.getSelectionModel().selectRow(13)
+                            this.getSelectionModel().selectRow(3)
                             }, a)
                         }
                 }
@@ -111,7 +109,7 @@ App.GridGraph = Ext.extend(Ext.Container, {
                 id: 'contactCont',
                 width: 226
             }, {
-                xtype: 'graph',
+                xtype: 'graph',                
                 id: 'graphCont',
                 flex: 1
             }]
