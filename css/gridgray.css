@@ -253,7 +253,7 @@ td.x-grid3-hd-over .x-grid3-hd-inner, td.sort-desc .x-grid3-hd-inner, td.sort-as
     font:normal 11px tahoma, arial, helvetica, sans-serif;
 }
 
-.x-grid-with-col-lines .x-grid3-row td.x-grid3-cell {
+.x-grid-with-col-lines .x-grid3-row td.x-grid3-cell {    
     border-right-color:#ededed;
 }
 

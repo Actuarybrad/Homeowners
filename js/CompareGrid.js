@@ -28,8 +28,11 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                 singleSelect: true,
                 listeners: {
                     rowselect: function(c, b, r) {
-                        Ext.getCmp('contactCont').updateDetail(r.data);
-                        //Ext.getCmp('graphCont').updateGraph(r.data);
+						//var detailData = [[2004, r.data.cr04], [2005, r.data.cr05], [2006, r.data.cr06], [2007, r.data.cr07], [2008, r.data.cr08]];					
+						//result = Ext.util.JSON.decode('{"results":[' +Ext.util.JSON.encode(r.json)+ ']}');						
+						//Ext.StoreMgr.get('testStore').loadData(result);
+						Ext.getCmp('contactCont').updateDetail(r.data);					
+                        Ext.getCmp('graphCont').updateGraph(r.data);						
                     }
                 }
             }),
@@ -44,7 +47,7 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                     fn: function() {
                         var a = this;
                         this.getStore().on("load", function() {
-                            this.getSelectionModel().selectRow(2)
+                            this.getSelectionModel().selectRow(13)
                             }, a)
                         }
                 }
@@ -61,17 +64,14 @@ Ext.reg('comparegrid', App.CompareGrid);
 
 App.ContactDetail = Ext.extend(Ext.BoxComponent, {
     tplMarkup: ['<div class="thumb-wrap">',
-                '<div class="contactFour">',
-                //'<h4>Contact Information</h4>',
-                //'<h4></h4>',
+                '<div class="contactFour">',                
                 '</div>',
                 '<div class="contactTop">',
                 '<p class="contactHead">Company</p><p>{short}</p>',
                 '<p class="contactHead">Group</p><p>{grpname}</p>',
                 '<p class="contactHead">Phone Number</p><p>{phone}</p>',
                 '<p class="contactHead">Web Site</p><p><a class="webLink2" href="http://{web}">{web}</a></p>',
-                '<table class="contactTable">',
-                //'<tr><td><p class="contactHead">Phone Number</p><p>{phone}</p></td><td><p class="contactHead">Web Site</p><p><a class="webLink2" href="http://{web}">{web}</a></p></td></tr>',
+                '<table class="contactTable">',                
                 '<tr><td class="left"><p class="contactHead">A.M. Best Rating</p><p>{ambest}</p></td><td><p class="contactHead">Market Share</p><p>{ms08}</p></td></tr>',
                 '</table>',
                 '</div>',
@@ -87,29 +87,6 @@ App.ContactDetail = Ext.extend(Ext.BoxComponent, {
 });
 Ext.reg('contactdetail', App.ContactDetail);
 
-/*App.GridGraph = Ext.extend(Ext.Container, {
-    layout: {
-        type: 'vbox',
-        pack: 'start',
-        align: 'stretch'
-    },
-    initComponent: function() {
-        this.items = [{
-            xtype: 'comparegrid',
-            id: 'gridPanel',
-            height:478
-        },{
-            xtype: 'contactdetail',
-            id: 'contactCont',
-            flex: 1
-            //height: 200,
-            //width: 250
-        }];
-    App.GridGraph.superclass.initComponent.apply(this, arguments);
-    }
-});
-Ext.reg('gridgraph', App.GridGraph);*/
-
 App.GridGraph = Ext.extend(Ext.Container, {
     layout: {
         type: 'vbox',
@@ -120,7 +97,7 @@ App.GridGraph = Ext.extend(Ext.Container, {
         this.items = [{
             xtype: 'comparegrid',
             id: 'gridPanel',
-            height: 476
+            height: 475
         }, {
             xtype: 'container',
             flex: 1,
@@ -134,7 +111,7 @@ App.GridGraph = Ext.extend(Ext.Container, {
                 id: 'contactCont',
                 width: 226
             }, {
-                xtype: 'box',
+                xtype: 'graph',
                 id: 'graphCont',
                 flex: 1
             }]
