@@ -24,7 +24,7 @@ App.workspace = function() {
                     id: 'headerBox',
                     autoEl: {
                         tag: 'img',
-                        src: 'images/allr.jpg'
+                        src: 'images/allr1.jpg'
                     }
                 },{
                     flex: 1,
@@ -42,7 +42,7 @@ App.workspace = function() {
                     },{
                         xtype: 'container',
                         flex: 1,
-                        margins: '30 0 4 25',
+                        margins: '30 0 4 22',
                         layout: 'card',
                         activeItem: 0,
                         id: 'card-panel',

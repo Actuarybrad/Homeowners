@@ -298,5 +298,6 @@ App.FormWiz.prototype.getRadioValues = function() {
     wizObj['cov'] = Ext.DomQuery.selectNode('input[name=cov]:checked ~ label').innerHTML;
     wizObj['struct'] = Ext.DomQuery.selectNode('input[name=struct]:checked ~ label').innerHTML;
     wizObj['dist'] = Ext.DomQuery.selectNode('input[name=dist]:checked ~ label').innerHTML;
+    wizObj['year'] = Ext.DomQuery.selectNode('input[name=year]:checked ~ label').innerHTML;
     return wizObj;
 };

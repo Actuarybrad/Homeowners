@@ -66,7 +66,7 @@ span.services{
 #startPage{
   padding-top:10px;
   padding-bottom:0px;
-  padding-right:10px;
+  padding-right:4px;
   padding-left:4px;
 }
 
@@ -100,8 +100,14 @@ ul.linkList li{
   text-align:right;
 }
 
-.bulletClick a{
-  text-decoration:none;
+.bulletClicka{
+  /*color:#800000;*/
+  /*color:#574972;*/
+  /*color:#50537B;*/
+  /*color:#7C6283;*/
+  /* color:#755D7B; */
+  /* color:#7f4351; */
+  color:#634e68;
 }
 
 .linkOver{
@@ -289,4 +295,64 @@ table.contactTable td.left{
 
 #graphCont{
   padding: 0px 2px 0px 6px;
+}
+/*-----Related-Top-Table------*/
+.x-window-tc{
+background-image:url(../images/reviewHead.jpg);
+background-repeat:repeat-x;
+background-color:#eFeFeF;
+height:25px;
+} 
+
+#reviewTitle{
+width:100%;
+}
+
+#reviewTitle td{
+padding: 0px 3px 0px 3px;
+}
+
+h3.reviewLarge{
+  text-align:left;
+	font:bold 11px tahoma,arial,verdana,sans-serif; 
+  color:#706B81;
+}
+
+#topClose{
+	font:normal 11px tahoma,arial,verdana,sans-serif;
+  cursor:pointer;
+}
+
+.closeOver{
+  text-decoration:underline;
+  color:#914848;
+}
+/*-----Related-Top-Table------*/
+dl.selDef{
+  text-align:left;
+  line-height:1.4;
+  padding:5px 0 0px 0;
+}
+
+dl.selDef dt{
+  color:#716C86;
+  padding:0px 0 0 5px;
+  font-weight: 600;
+}
+
+dl.selDef dd{
+  color:#46474e;
+  padding:0 0px 1px 14px;
+}
+
+li.dividers{
+  list-style-type:none;
+  font-size:0;
+  line-height:1px;
+  height:1px;
+  overflow:hidden;
+  background-color:#f3f3f4;
+  width:95%;
+  padding:0;
+  margin:1px 0 1px 14px;
 }

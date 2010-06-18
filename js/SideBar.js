@@ -137,6 +137,7 @@ App.SideBar = Ext.extend(Ext.Container, {
     onLayout: function() {
         App.SideBar.superclass.onLayout.call(this);
         Ext.get('link-20').addClass('bulletClick');
+        Ext.get('link-20').down('a').addClass('bulletClicka');
     },
     mouseOver: function(c, d) {
         Ext.get(d).down('a').addClass('linkOver');
@@ -149,8 +150,10 @@ App.SideBar = Ext.extend(Ext.Container, {
         Ext.get("leftSidebar").select("li.bullet").each(function(c) {
             if (c.id != d.id) {
                 Ext.get(c).removeClass('bulletClick');
+                Ext.get(c).down('a').removeClass('bulletClicka');
             } else {
                 Ext.get(c).addClass('bulletClick');
+                Ext.get(c).down('a').addClass('bulletClicka');
             }
         });
         var a = d.id.split("link-")[1];
@@ -158,11 +161,27 @@ App.SideBar = Ext.extend(Ext.Container, {
         switch (true) {
         case f == 20:
             Ext.getCmp('card-panel').getLayout().setActiveItem(0);
-          break        
+          break
+        case f == 7:
+            win = new App.Review();
+            win.show().alignTo('link-7','tl-bl', [206,-50]);
+            Ext.getCmp('reviewWin').getEl().slideIn('l', {easing:'easeOut',duration:.6});
+            Ext.getCmp('reviewWin').updateReview(Ext.getCmp('formCard').getRadioValues());
+            Ext.get('topClose').addClassOnOver('closeOver');
+            Ext.get('topClose').on('click', function (){
+              Ext.get('link-7').removeClass('bulletClick');
+              Ext.get('link-7').down('a').removeClass('bulletClicka');
+              //var k = Ext.getCmp('card-panel').getLayout().activeItem.id;
+              //var j = parseInt(k.split('card-')[1]);
+              Ext.get('link-20').addClass('bulletClick');
+              Ext.get('link-20').down('a').addClass('bulletClicka');
+              Ext.getCmp('reviewWin').getEl().slideOut('l', {remove:true,duration:.6});
+            });
+          break
         case f == 8:
             Ext.StoreMgr.get('cmpStore').load({params: Ext.getCmp('formCard').getForm().getValues()});
             Ext.getCmp('card-panel').getLayout().setActiveItem(1);
-          break        
+          break
         default:
             Ext.getCmp('card-panel').getLayout().setActiveItem(2);
             Ext.getCmp("formCard").getLayout().setActiveItem(f);
