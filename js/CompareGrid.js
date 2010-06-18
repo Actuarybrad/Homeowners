@@ -28,9 +28,9 @@ App.CompareGrid = Ext.extend(Ext.grid.GridPanel, {
                 singleSelect: true,
                 listeners: {
                     rowselect: function(c, b, r) {											
-						res = Ext.util.JSON.decode('{"results":[{"ratio":' +r.data.cr04+ '},{"ratio":' +r.data.cr05+ '},{"ratio":' +r.data.cr06+ '},{"ratio":' +r.data.cr07+ '},{"ratio":' +r.data.cr08+ '}]}');						
-						Ext.getCmp('contactCont').updateDetail(r.data);                       						
-                        Ext.getCmp('graphCont').loadData(r.data.company,res);								
+                      res = Ext.util.JSON.decode('{"results":[{"ratio":' +r.data.cr04+ '},{"ratio":' +r.data.cr05+ '},{"ratio":' +r.data.cr06+ '},{"ratio":' +r.data.cr07+ '},{"ratio":' +r.data.cr08+ '}]}');
+                      Ext.getCmp('graphCont').loadData(r.data.company,res);
+                      Ext.getCmp('contactCont').updateDetail(r.data);
                     }
                 }
             }),

@@ -63,11 +63,13 @@ App.Graph = Ext.extend(Ext.Container, {
 			}
 		},
 		yAxis: {
-			min: 0,
-			max: 3.00,
+			/*min: 0,
+			max: 2.00,
+      minPadding:0.09,*/
+      maxPadding:0.12,
 			tickWidth: 0,
 			tickLength: 0,
-			endOnTick: false,
+			endOnTick: true,
 			minorTickInterval: null,
 			gridLineColor: '#EFEFEF',
 			lineColor: '#D1D1D1',
@@ -91,7 +93,9 @@ App.Graph = Ext.extend(Ext.Container, {
 			column: {
 				pointPadding: 0.26,
 				animation: true,
-				borderColor: '#5F588D',
+			 //	borderColor: '#5F588D',
+				//borderColor: '#7C7398',
+				borderColor: '#756D8F',
 				borderRadius: 5,
 				borderWidth: 2
 			}
@@ -119,30 +123,30 @@ App.Graph = Ext.extend(Ext.Container, {
 			};
 		},
 		loadData: function(data,result){
-			this.items.items[0].store.on('load', function(){
-				Ext.getCmp('highy').addSeries([{
-					type: 'column',
-					dataIndex: 'ratio',
-					color: '#60598F',
-					dataLabels: {
-						enabled: true,
-						align: 'center',
-						x: -1,
-						y: -4,
-						formatter: function() {
-							return Highcharts.numberFormat(this.y, 2, '.', ',');
-						},
-						style: {
-							color: '#666666',
-							font: 'normal 10px Arial, Lucida Grande, Verdana, sans-serif'
-						}
-					},
-					name: data                       
-				}], false)
-				Ext.getCmp('highy').refresh();
-			})
-			this.items.items[0].store.loadData(result);
-         }
+		  this.items.items[0].store.loadData(result);
+  		Ext.getCmp('highy').addSeries([{
+  			type: 'column',
+  			dataIndex: 'ratio',
+  			//color: '#60598F',
+  			//color: '#706B85',
+  			//color: '#7E7995',
+  			color: '#756D8F',
+  			dataLabels: {
+  				enabled: true,
+  				align: 'center',
+  				x: -1,
+  				y: -4,
+  				formatter: function() {
+  					return Highcharts.numberFormat(this.y, 2, '.', ',');
+  				},
+  				style: {
+  					color: '#666666',
+  					font: 'normal 10px Arial, Lucida Grande, Verdana, sans-serif'
+  				}
+  			},
+  			name: data
+  		}], false);
+     }
  });
 
 Ext.reg('graph', App.Graph);    

@@ -201,13 +201,26 @@ ul.msd a{
   line-height:1.20;
 }
 
-.x-grid3-row-selected {	
+.x-grid3-row-selected {
   /* background-image: none; */
-  background:transparent url(../images/default/grid/row-over.gif) !important;
+  /*background:transparent url(../images/default/grid/row-over.gif) !important;*/
   /*background: #E6E6F2 !important;*/  
-  /* border:1px dotted #B9B5CF;*/
-  /* background: #EAEAF3 !important; */
-  border:1px dotted #B3AFC8;
+  /*border:1px dotted #B9B5CF;*/
+  /*background: #EAEAF3 !important;*/
+  /*background: #ECEBED !important;*/
+  /*background: #F0EBF2 !important;*/
+  background: #F1EDF3 !important;
+  /*border:1px dotted #B3AFC8;*/
+  /*border:1px dotted #6D6882;*/
+  border:1px dotted #A7A5A8;
+}
+
+.x-grid-with-col-lines .x-grid3-row{
+  border-top-color:transparent;
+}
+
+.x-grid-with-col-lines .x-grid3-row-selected {
+	border-top-color:#A7A5A8;
 }
 
 td.x-grid3-hd-over,td.sort-desc,td.sort-asc,td.x-grid3-hd-menu-open{
@@ -233,9 +246,7 @@ td.x-grid3-hd-over .x-grid3-hd-inner,td.sort-desc .x-grid3-hd-inner,td.sort-asc 
   background-image:url(../images/sort_desc.gif);
 }
 
-.x-grid-with-col-lines .x-grid3-row{
-  border-top-color:transparent;
-}
+
 /*------contact-panel---------------*/
 div.thumb-wrap{
   line-height:1.2;
