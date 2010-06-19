@@ -91,6 +91,7 @@ App.GridGraph = Ext.extend(Ext.Container, {
         pack: 'start',
         align: 'stretch'
     },
+    id: 'card-8',
     initComponent: function() {
         this.items = [{
             xtype: 'comparegrid',

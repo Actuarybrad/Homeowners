@@ -25,7 +25,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildCity: function() {
         return {
             defaultType: 'radiogroup',
-            //id: 'card-0',
+            id: 'card-0',
             defaults: {
                 hideLabel: true
             },
@@ -80,7 +80,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildDed: function() {
         return {
             defaultType: 'radiogroup',
-            //id: 'card-1',
+            id: 'card-1',
             defaults: {
                 hideLabel: true
             },
@@ -107,7 +107,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildCov: function() {
         return {
             defaultType: 'radiogroup',
-            //id: 'card-2',
+            id: 'card-2',
             defaults: {
                 hideLabel: true
             },
@@ -154,7 +154,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildStruct: function() {
         return {
             defaultType: 'radiogroup',
-            //id: 'card-3',
+            id: 'card-3',
             defaults: {
                 hideLabel: true
             },
@@ -177,7 +177,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildDist: function() {
         return {
             defaultType: 'radiogroup',
-            //id: 'card-4',
+            id: 'card-4',
             defaults: {
                 hideLabel: true
             },
@@ -204,6 +204,7 @@ App.FormWiz = Ext.extend(Ext.form.FormPanel, {
     buildYear: function() {
         return {
             defaultType: 'radiogroup',
+            id: 'card-5',
             defaults: {
                 hideLabel: true
             },

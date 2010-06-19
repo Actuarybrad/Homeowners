@@ -200,7 +200,7 @@ ul.msd a{
 /*-------------------Grid----------*/
 .x-grid3-row-alt{
 	/* background-color:#faf9fb; */
-	background-color:#FBFAFB;
+	background-color:#FAFAFA;
 }
 
 .x-grid3-row td{
@@ -215,10 +215,17 @@ ul.msd a{
   /*background: #EAEAF3 !important;*/
   /*background: #ECEBED !important;*/
   /*background: #F0EBF2 !important;*/
-  background: #F1EDF3 !important;
   /*border:1px dotted #B3AFC8;*/
   /*border:1px dotted #6D6882;*/
-  border:1px dotted #A7A5A8;
+  /*border:1px dotted #A7A5A8;*/
+  /*background: #F1EDF3 !important;*/
+  /*background: #e9e3ec !important;*/
+  /*background: #eeebf0 !important;*/
+  /*background: #e6e1e9 !important;*/
+  background: #EBE7ED !important;
+  /*border:1px dotted #BDB1C4;*/
+  /*border:1px dotted #c5bacc;*/
+  border:1px dotted #D2CBD8;
 }
 
 .x-grid-with-col-lines .x-grid3-row{
@@ -226,7 +233,8 @@ ul.msd a{
 }
 
 .x-grid-with-col-lines .x-grid3-row-selected {
-	border-top-color:#A7A5A8;
+	/*border-top-color:#cdc4d3;*/
+	border-top-color:#D2CBD8;
 }
 
 td.x-grid3-hd-over,td.sort-desc,td.sort-asc,td.x-grid3-hd-menu-open{
@@ -268,7 +276,10 @@ p.contactHead{
 }
 
 a.webLink2{
-  color:#7979BB;
+  /*color:#7979BB;*/
+  color:#7a6688;
+  /*color:#715e7e;*/
+  /*color:#60506a;*/
   font:normal normal 500 11px Arial;
   text-decoration:underline;
   line-height:1.2;
@@ -315,7 +326,9 @@ padding: 0px 3px 0px 3px;
 h3.reviewLarge{
   text-align:left;
 	font:bold 11px tahoma,arial,verdana,sans-serif; 
-  color:#706B81;
+  /*color:#706B81;*/
+  /*color:#6C6A72;*/
+  color:#6E6B75;
 }
 
 #topClose{
@@ -335,7 +348,10 @@ dl.selDef{
 }
 
 dl.selDef dt{
-  color:#716C86;
+  /*color:#716C86;*/
+  /*color:#646077;*/
+  /*color:#63606C;*/
+  color:#5E5B64;
   padding:0px 0 0 5px;
   font-weight: 600;
 }

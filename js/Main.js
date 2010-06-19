@@ -42,7 +42,7 @@ App.workspace = function() {
                     },{
                         xtype: 'container',
                         flex: 1,
-                        margins: '30 0 4 22',
+                        margins: '30 0 4 20',
                         layout: 'card',
                         activeItem: 0,
                         id: 'card-panel',

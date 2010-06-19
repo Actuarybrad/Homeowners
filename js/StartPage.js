@@ -17,6 +17,7 @@ App.StartPage = Ext.extend(Ext.BoxComponent, {
 		'<p>To compare premiums offered in New Mexico for other types of insurance, please visit the links under <span class="highLight">"Premium Comparison Guides"</span>.</p>',		
 		'</div>'	
 	],
+  id: 'card-20',
     initComponent: function() {	    
 	    this.html = this.pageContent.join("");
         App.StartPage.superclass.initComponent.call(this);

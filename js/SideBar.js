@@ -171,10 +171,15 @@ App.SideBar = Ext.extend(Ext.Container, {
             Ext.get('topClose').on('click', function (){
               Ext.get('link-7').removeClass('bulletClick');
               Ext.get('link-7').down('a').removeClass('bulletClicka');
-              //var k = Ext.getCmp('card-panel').getLayout().activeItem.id;
-              //var j = parseInt(k.split('card-')[1]);
-              Ext.get('link-20').addClass('bulletClick');
-              Ext.get('link-20').down('a').addClass('bulletClicka');
+              k = Ext.getCmp('card-panel').getLayout().activeItem.id;
+              if(k=='formCard') {
+								var l = Ext.getCmp('formCard').getLayout().activeItem.id;
+								var j = parseInt(l.split('card-')[1]);
+  						} else {
+								var j = parseInt(k.split('card-')[1]);
+  						}
+              Ext.get('link-'+j).addClass('bulletClick');
+              Ext.get('link-'+j).down('a').addClass('bulletClicka');
               Ext.getCmp('reviewWin').getEl().slideOut('l', {remove:true,duration:.6});
             });
           break
