@@ -1,4 +1,4 @@
-Ext.ns('App');
+﻿Ext.ns('App');
 App.workspace = function() {
     var main;
     return {
@@ -52,6 +52,14 @@ App.workspace = function() {
             								xtype: 'gridgraph'
             							},{
             								xtype: 'formwiz'
+            							},{
+            								xtype: 'box',
+                            id: 'card-8',
+                            html: '<p>Card-8</p>'                      
+            							},{
+                            xtype: 'box',
+                            id: 'card-9',
+                            html: '<p>Card-9</p>'
             							}]
                       }]
                     },{

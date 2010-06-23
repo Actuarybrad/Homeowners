@@ -1,4 +1,4 @@
-body{
+﻿body{
   font-size:12px;
   line-height:18px;
   color:#36373C;
@@ -19,15 +19,27 @@ a{
 #headerBox{
   background-color:transparent;
 }
+
+p img.right{
+  float:right;
+  margin:0 0 0 1.3em;
+  padding:0;
+}
+
+#prcLogo{  
+  position:absolute;
+  top:636px;
+  right:0px;
+}
 /*-------startpage-------*/
 
 span.largey{
-  color:#656178;
+  color:#656178;  
   font-size:18px;
   letter-spacing:-1px;
   line-height:1.30;
   text-decoration:none;
-  font-family:Arial;
+  font-family: Arial;
   font-weight:normal;
   font-style:normal;
   font-variant:normal;
@@ -55,10 +67,11 @@ span.services{
   color:#656178;
   font-size:18px;
   letter-spacing:-1px;
-  line-height:1.30;
+  line-height:1.30; 
   text-decoration:none;
   font-weight:normal;
-  font-family:Arial;
+  /* font-family: "Trebuchet MS", Arial; */
+  font-family: Arial;
   font-style:normal;
   font-variant:normal;
 }
@@ -130,7 +143,7 @@ ul.msd{
   background-repeat:no-repeat;
   background-color:#FFF;
   height:25px;
-  margin-top:30px;
+  margin-top:35px;
 }
 
 #Review{
@@ -289,14 +302,14 @@ div.contactFour{
   background-image:url(../images/Contact1.jpg);
   background-repeat:no-repeat;
   background-color:#FFF;
-  height:25px;
+  height:24px;
 }
 
 div.contactTop{
-  border: 3px solid #E3E2E4;
-  border-top: 0px solid #F1F0F2;
-  padding-left: 6px;
-  padding-bottom: 1px;
+  border: 4px solid #E3E2E4;
+  border-top: 1px solid #d3d2d4;
+  padding-left: 5px;
+  padding-bottom: 0px;
   color:#4A4B53;
 }
 
@@ -305,7 +318,7 @@ table.contactTable td.left{
 }
 
 #graphCont{
-  padding: 0px 2px 0px 6px;
+  padding: 0px 0px 0px 6px;
 }
 /*-----Related-Top-Table------*/
 .x-window-tc{

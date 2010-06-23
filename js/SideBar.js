@@ -1,4 +1,4 @@
-Ext.ns('App');
+﻿Ext.ns('App');
 App.LinksPanel = Ext.extend(Ext.Container, {
     border: false,
     layout: 'fit',
@@ -50,11 +50,11 @@ App.SideBar = Ext.extend(Ext.Container, {
         htext: 'Review',
         links: [{
             text: 'Review Selections',
-            id: 'link-7',
+            id: 'link-6',
             href: '#'
         }, {
             text: 'Submit Selections',
-            id: 'link-8',
+            id: 'link-7',
             href: '#'
         }]
 	},
@@ -62,15 +62,15 @@ App.SideBar = Ext.extend(Ext.Container, {
         htext: 'Resources',
         links: [{
             text: 'Consumer Guide',
-            id: 'link-9',
-            href: '#'
+            id: 'link-11',
+            href: 'http://www.naic.org/documents/consumer_guide_home_quick.pdf'
         }, {
             text: 'Cost of Homweowners',
-            id: 'link-10',
+            id: 'link-8',
             href: '#'
         }, {
             text: 'Homeowners FAQs',
-            id: 'link-11',
+            id: 'link-9',
             href: '#'
         }, {
             text: 'Market Share Rports',
@@ -82,27 +82,27 @@ App.SideBar = Ext.extend(Ext.Container, {
         htext: 'Guides',
         links: [{
             text: 'Workers Compensation',
-            id: 'link-15',
+            id: 'link-13',
             href: '#'
         }, {
             text: 'Condominium Owners',
-            id: 'link-16',
+            id: 'link-14',
             href: '#'
         }, {
             text: 'Renters',
-            id: 'link-17',
+            id: 'link-15',
             href: '#'
         }, {
             text: 'Automobile Single Driver',
-            id: 'link-18',
+            id: 'link-16',
             href: '#'
         }, {
             text: 'Automobile Household Driver',
-            id: 'link-19',
+            id: 'link-17',
             href: '#'
         }, {
             text: 'Homeowners',
-            id: 'link-20',
+            id: 'link-10',
             href: '#'
         }]
 	},
@@ -136,8 +136,8 @@ App.SideBar = Ext.extend(Ext.Container, {
     },
     onLayout: function() {
         App.SideBar.superclass.onLayout.call(this);
-        Ext.get('link-20').addClass('bulletClick');
-        Ext.get('link-20').down('a').addClass('bulletClicka');
+        Ext.get('link-10').addClass('bulletClick');
+        Ext.get('link-10').down('a').addClass('bulletClicka');
     },
     mouseOver: function(c, d) {
         Ext.get(d).down('a').addClass('linkOver');
@@ -145,52 +145,60 @@ App.SideBar = Ext.extend(Ext.Container, {
     mouseOut: function(c, d) {
         Ext.get(d).down('a').removeClass('linkOver');
     },
-    doAction: function(c, d) {
-        c.stopEvent();
-        Ext.get("leftSidebar").select("li.bullet").each(function(c) {
-            if (c.id != d.id) {
-                Ext.get(c).removeClass('bulletClick');
-                Ext.get(c).down('a').removeClass('bulletClicka');
-            } else {
-                Ext.get(c).addClass('bulletClick');
-                Ext.get(c).down('a').addClass('bulletClicka');
-            }
-        });
+    doAction: function(c, d) {  
         var a = d.id.split("link-")[1];
-        var f = parseInt(a);
+        var f = parseInt(a);        
+        if (f < 11) {  
+        c.stopEvent();        
+        Ext.get("leftSidebar").select("li.bullet").each(function(h) {
+            if (h.id != d.id) {
+                Ext.get(h).removeClass('bulletClick');
+                Ext.get(h).down('a').removeClass('bulletClicka');
+            } else {
+                Ext.get(h).addClass('bulletClick');
+                Ext.get(h).down('a').addClass('bulletClicka');
+            }
+        });              
         switch (true) {
-        case f == 20:
+        case f == 10:
             Ext.getCmp('card-panel').getLayout().setActiveItem(0);
           break
-        case f == 7:
+        case f == 6:
             win = new App.Review();
-            win.show().alignTo('link-7','tl-bl', [206,-50]);
+            win.show().alignTo('link-6','tl-bl', [206,-50]);
             Ext.getCmp('reviewWin').getEl().slideIn('l', {easing:'easeOut',duration:.6});
             Ext.getCmp('reviewWin').updateReview(Ext.getCmp('formCard').getRadioValues());
             Ext.get('topClose').addClassOnOver('closeOver');
             Ext.get('topClose').on('click', function (){
-              Ext.get('link-7').removeClass('bulletClick');
-              Ext.get('link-7').down('a').removeClass('bulletClicka');
-              k = Ext.getCmp('card-panel').getLayout().activeItem.id;
-              if(k=='formCard') {
-								var l = Ext.getCmp('formCard').getLayout().activeItem.id;
-								var j = parseInt(l.split('card-')[1]);
-  						} else {
-								var j = parseInt(k.split('card-')[1]);
-  						}
-              Ext.get('link-'+j).addClass('bulletClick');
-              Ext.get('link-'+j).down('a').addClass('bulletClicka');
-              Ext.getCmp('reviewWin').getEl().slideOut('l', {remove:true,duration:.6});
+                Ext.get('link-6').removeClass('bulletClick');
+                Ext.get('link-6').down('a').removeClass('bulletClicka');
+                k = Ext.getCmp('card-panel').getLayout().activeItem.id;
+                  if(k=='formCard') {
+                      var l = Ext.getCmp('formCard').getLayout().activeItem.id;
+                      var j = parseInt(l.split('card-')[1]);
+                  } else {
+                      var j = parseInt(k.split('card-')[1]);
+                  }
+                Ext.get('link-'+j).addClass('bulletClick');
+                Ext.get('link-'+j).down('a').addClass('bulletClicka');
+                Ext.getCmp('reviewWin').getEl().slideOut('l', {remove:true,duration:.6});
             });
           break
-        case f == 8:
+        case f == 7:
             Ext.StoreMgr.get('cmpStore').load({params: Ext.getCmp('formCard').getForm().getValues()});
             Ext.getCmp('card-panel').getLayout().setActiveItem(1);
           break
+        case f == 8:            
+            Ext.getCmp('card-panel').getLayout().setActiveItem(3);
+          break
+         case f == 9:            
+            Ext.getCmp('card-panel').getLayout().setActiveItem(4);
+          break 
         default:
             Ext.getCmp('card-panel').getLayout().setActiveItem(2);
             Ext.getCmp("formCard").getLayout().setActiveItem(f);
         }
+      }     
     }
 });
 Ext.reg('sidebar', App.SideBar);
